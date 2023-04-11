@@ -1,0 +1,84 @@
+// Scss Functions
+@import 'functions.scss';
+
+/*===Reset Styles===*/
+@import 'nullstyle.scss';
+
+/*===Header===*/
+@import 'header.scss';
+
+/*===Footer===*/
+@import 'footer.scss';
+
+/*===BEM Blocks===*/
+@import 'common.scss';
+
+/*===Burger===*/
+@import 'burger.scss';
+
+/*===============Global styles===============*/
+
+:root {
+  --primary-font-family: 'Noto Sans', sans-serif;
+}
+
+html {
+  @media (prefers-color-scheme: dark) {
+    & {
+      --bg-primary: #3d3c42;
+      --bg-primary-opacity: rgba(61, 60, 66, 0.6);
+
+      --color-primary: #fefbf6;
+      --link-accent: #a6d1e6;
+      --link-accent-opacity: rgba(127, 82, 131, 0.2);
+
+      --checkbox-bg: rgba(254, 251, 246, 0.2);
+    }
+  }
+
+  &.dark {
+    --bg-primary: #3d3c42;
+    --bg-primary-opacity: rgba(61, 60, 66, 0.6);
+
+    --color-primary: #fefbf6;
+
+    --link-accent: #7f5283;
+    --link-accent-opacity: rgba(127, 82, 131, 0.2);
+    --link-accent-opacity-hover: rgba(127, 82, 131, 0.5);
+
+    --checkbox-bg: rgba(254, 251, 246, 0.2);
+    --checkbox-circle: #fefbf6;
+  }
+  &.light {
+    --bg-primary: #fefbf6;
+
+    --bg-primary-opacity: rgba(254, 251, 246, 0.6);
+
+    --color-primary: #3d3c42;
+
+    --link-accent: #a6d1e6;
+    --link-accent-opacity: rgba(166, 209, 230, 0.2);
+    --link-accent-opacity-hover: rgba(166, 209, 230, 0.5);
+
+    --checkbox-bg: rgba(127, 82, 131, 0.2);
+    --checkbox-circle: #7f5283;
+  }
+}
+
+body {
+  font-family: var(--primary-font-family);
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.container {
+  max-width: 1320px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
