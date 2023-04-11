@@ -3,6 +3,8 @@
   align-items: center;
   gap: 10px;
   flex-wrap: nowrap;
+  position: relative;
+  z-index: 5;
 
   &__icon {
     width: rem(38);
@@ -25,6 +27,7 @@
   height: rem(16);
   font-size: rem(16);
   position: relative;
+  z-index: 5;
 
   &__input {
     width: 0;

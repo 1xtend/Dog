@@ -40,7 +40,7 @@ html {
     --bg-primary: #3d3c42;
     --bg-primary-opacity: rgba(61, 60, 66, 0.6);
 
-    --color-primary: #fefbf6;
+    --bg-secondary: #fefbf6;
 
     --link-accent: #7f5283;
     --link-accent-opacity: rgba(127, 82, 131, 0.2);
@@ -51,7 +51,6 @@ html {
   }
   &.light {
     --bg-primary: #fefbf6;
-
     --bg-primary-opacity: rgba(254, 251, 246, 0.6);
 
     --color-primary: #3d3c42;

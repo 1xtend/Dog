@@ -7,15 +7,24 @@
     justify-content: space-between;
     min-height: rem(70);
   }
-  &__logo {
-  }
-  &__menu {
-  }
 }
 
 .menu {
   display: flex;
   align-items: center;
+
+  @media (max-width: 599.98px) {
+    &::before {
+      content: '';
+      position: absolute;
+      height: rem(70);
+      width: 100%;
+      top: 0;
+      left: 0;
+      background-color: var(--bg-primary);
+      z-index: 3;
+    }
+  }
 
   &__theme-toggler {
     margin-right: rem(35);
@@ -24,14 +33,8 @@
       margin-right: rem(20);
     }
   }
-  &__burger {
-  }
-  &__nav {
-  }
 }
 
-.burger {
-}
 .navbar {
   display: flex;
   align-items: center;
@@ -39,15 +42,16 @@
 
   @media (max-width: 599.98px) {
     position: absolute;
-    top: rem(70);
+    top: 0;
     width: 100%;
     height: 100%;
     display: block;
-    overflow: auto;
     background-color: var(--bg-primary);
-    padding: 30px 30px 15px 50px;
+    padding: 100px 30px 35px 50px;
     left: -100%;
     transition: left 0.3s ease-in-out;
+    overflow: auto;
+    z-index: 2;
 
     & > *:not(:last-child) {
       margin-bottom: 20px;
@@ -56,11 +60,6 @@
     &.is-active {
       left: 0;
     }
-  }
-
-  &__list {
-  }
-  &__item {
   }
   &__link {
     font-size: rem(20);
@@ -97,7 +96,5 @@
     &:active::before {
       background-color: var(--link-accent);
     }
-  }
-  &__btn {
   }
 }
