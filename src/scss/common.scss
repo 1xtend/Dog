@@ -1,7 +1,7 @@
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: rem(10);
   flex-wrap: nowrap;
   position: relative;
   z-index: 5;
@@ -23,9 +23,8 @@
 .theme-toggler {
   display: inline-block;
   cursor: pointer;
-  width: rem(35);
-  height: rem(16);
-  font-size: rem(16);
+  width: rem(48);
+  height: rem(24);
   position: relative;
   z-index: 5;
 
@@ -35,7 +34,7 @@
     opacity: 0;
 
     &:checked + .theme-toggler__slider::before {
-      left: calc(100% - em(14, 16));
+      left: calc(100% - rem(22));
     }
   }
   &__slider {
@@ -45,17 +44,18 @@
     bottom: 0;
     left: 0;
     background-color: var(--checkbox-bg);
-    border-radius: em(16, 16);
+    border-radius: rem(16);
 
     &::before {
       content: '';
       position: absolute;
-      width: em(12, 16);
-      height: em(12, 16);
-      border-radius: em(12, 16);
+      width: rem(20);
+      height: rem(20);
+      border-radius: rem(20);
       background-color: var(--checkbox-circle);
-      top: calc(50% - em(6, 16));
-      left: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      left: rem(2);
       transition: left 0.2s ease-in-out, background-color 0.2s ease-in-out;
     }
   }
