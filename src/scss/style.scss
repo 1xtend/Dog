@@ -89,8 +89,86 @@ body {
 /*===Footer===*/
 @import 'footer.scss';
 
-/*===============Hero===============*/
-
 main {
   flex: 1 0 auto;
+}
+
+/*===============Hero===============*/
+
+.hero {
+  &__container {
+    padding: rem(80) rem(5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 479.98px) {
+      padding-top: rem(20);
+    }
+  }
+  &__content {
+  }
+}
+.container {
+}
+.content-hero {
+  padding: rem(20);
+  background-color: var(--color-secondary-opacity);
+  border: rem(2) solid var(--color-secondary);
+  border-radius: rem(30);
+  text-align: center;
+
+  & > *:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font-size: rem(32);
+    font-weight: 600;
+    line-height: lh(44, 32);
+    letter-spacing: em(2, 32);
+
+    @media (max-width: 991.98px) {
+      font-size: rem(24);
+    }
+  }
+  &__image {
+    img,
+    video {
+      max-width: 100%;
+      max-height: rem(400);
+    }
+  }
+  &__btn {
+  }
+}
+.button {
+  &.is-active &__icon_svg {
+    display: none;
+  }
+  &.is-active &__icon_loader {
+    display: inline-block;
+  }
+
+  &__icon {
+    width: rem(20);
+    height: rem(20);
+  }
+}
+.loader {
+  border: rem(2) solid var(--color-primary);
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  display: none;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
