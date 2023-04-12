@@ -1,6 +1,4 @@
 .header {
-  background-color: var(--bg-primary);
-
   &__container {
     display: flex;
     align-items: center;
@@ -91,10 +89,10 @@
     }
 
     &:active {
-      color: var(--link-accent);
+      color: var(--accent-color);
     }
     &:active::before {
-      background-color: var(--link-accent);
+      background-color: var(--accent-color);
     }
   }
 }

@@ -4,15 +4,6 @@
 /*===Reset Styles===*/
 @import 'nullstyle.scss';
 
-/*===BEM Blocks===*/
-@import 'common.scss';
-
-/*===Header===*/
-@import 'header.scss';
-
-/*===Footer===*/
-@import 'footer.scss';
-
 /*===============Global styles===============*/
 
 :root {
@@ -22,42 +13,45 @@
 html {
   @media (prefers-color-scheme: dark) {
     & {
-      --bg-primary: #3d3c42;
-      --bg-primary-opacity: rgba(61, 60, 66, 0.6);
+      --bg-primary: #171717;
 
-      --color-primary: #fefbf6;
-      --link-accent: #a6d1e6;
-      --link-accent-opacity: rgba(127, 82, 131, 0.2);
+      --color-primary: #f9f9f9;
+      --color-primary-opacity: rgba(249, 249, 249, 0.2);
 
-      --checkbox-bg: rgba(254, 251, 246, 0.2);
+      --color-secondary: #444444;
+      --color-secondary-opacity: rgba(68, 68, 68, 0.4);
+
+      --accent-color: #da0037;
+      --accent-color-opacity: rgba(218, 0, 55, 0.2);
+      --accent-color-opacity-hover: rgba(218, 0, 55, 0.5);
     }
   }
 
   &.dark {
-    --bg-primary: #3d3c42;
-    --bg-primary-opacity: rgba(61, 60, 66, 0.6);
+    --bg-primary: #171717;
 
-    --bg-secondary: #fefbf6;
+    --color-primary: #f9f9f9;
+    --color-primary-opacity: rgba(249, 249, 249, 0.2);
 
-    --link-accent: #7f5283;
-    --link-accent-opacity: rgba(127, 82, 131, 0.2);
-    --link-accent-opacity-hover: rgba(127, 82, 131, 0.5);
+    --color-secondary: #444444;
+    --color-secondary-opacity: rgba(68, 68, 68, 0.4);
 
-    --checkbox-bg: rgba(254, 251, 246, 0.2);
-    --checkbox-circle: #fefbf6;
+    --accent-color: #da0037;
+    --accent-color-opacity: rgba(218, 0, 55, 0.2);
+    --accent-color-opacity-hover: rgba(218, 0, 55, 0.5);
   }
   &.light {
-    --bg-primary: #fefbf6;
-    --bg-primary-opacity: rgba(254, 251, 246, 0.6);
+    --bg-primary: #f9f9f9;
 
-    --color-primary: #3d3c42;
+    --color-primary: #171717;
+    --color-primary-opacity: rgba(23, 23, 23, 0.2);
 
-    --link-accent: #a6d1e6;
-    --link-accent-opacity: rgba(166, 209, 230, 0.2);
-    --link-accent-opacity-hover: rgba(166, 209, 230, 0.5);
+    --color-secondary: #cdf0ea;
+    --color-secondary-opacity: rgba(205, 240, 234, 0.4);
 
-    --checkbox-bg: rgba(127, 82, 131, 0.2);
-    --checkbox-circle: #7f5283;
+    --accent-color: #c490e4;
+    --accent-color-opacity: rgba(196, 144, 228, 0.2);
+    --accent-color-opacity-hover: rgba(196, 144, 228, 0.5);
   }
 }
 
@@ -65,6 +59,7 @@ body {
   font-family: var(--primary-font-family);
   font-weight: 500;
   color: var(--color-primary);
+  background-color: var(--bg-primary);
 
   &.is-fixed {
     overflow: hidden;
@@ -75,10 +70,27 @@ body {
   min-height: 100%;
   overflow: hidden;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
   max-width: 1320px;
   padding: 0 20px;
   margin: 0 auto;
+}
+
+/*===BEM Blocks===*/
+@import 'common.scss';
+
+/*===Header===*/
+@import 'header.scss';
+
+/*===Footer===*/
+@import 'footer.scss';
+
+/*===============Hero===============*/
+
+main {
+  flex: 1 0 auto;
 }

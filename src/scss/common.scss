@@ -43,7 +43,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: var(--checkbox-bg);
+    background-color: var(--color-primary-opacity);
     border-radius: rem(16);
 
     &::before {
@@ -52,7 +52,7 @@
       width: rem(20);
       height: rem(20);
       border-radius: rem(20);
-      background-color: var(--checkbox-circle);
+      background-color: var(--color-primary);
       top: 50%;
       transform: translateY(-50%);
       left: rem(2);
@@ -62,27 +62,33 @@
 }
 
 .button {
-  background-color: var(--link-accent-opacity);
   min-height: rem(45);
   padding: 5px 12px;
   font-size: rem(20);
   line-height: 1;
-  color: var(--color-primary);
-  border: rem(2) solid var(--link-accent);
-  border-radius: rem(5);
+  background-color: var(--accent-color-opacity);
+  border: rem(2) solid var(--accent-color);
+  border-radius: rem(15);
   transition: background-color 0.2s ease-in-out;
+  color: var(--color-primary);
 
   @media (any-hover: hover) {
     &:hover {
-      background-color: var(--link-accent-opacity-hover);
+      background-color: var(--accent-color-opacity-hover);
     }
   }
-
   &:active {
-    background-color: var(--link-accent);
+    background-color: var(--accent-color);
+  }
+
+  &__icon {
+    width: rem(20);
+    height: rem(20);
+    fill: var(--color-primary);
   }
 
   &_header {
     padding: 5px 25px;
+    border-radius: rem(5);
   }
 }
