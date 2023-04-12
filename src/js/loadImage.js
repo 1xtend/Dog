@@ -17,15 +17,14 @@ export function imageLoader() {
       .get('https://random.dog/woof.json')
       .then((res) => {
         imgButton.classList.remove('is-active');
+
         if (activeMedia) {
           activeMedia.remove();
         }
-        console.log(res.data);
 
         if (isImg(res.data.url)) {
           loadImg(res.data);
         } else if (isVideo(res.data.url)) {
-          console.log(res.data.url);
           loadVideo(res.data);
         }
       })
