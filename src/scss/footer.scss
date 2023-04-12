@@ -1,3 +1,25 @@
 .footer {
-  background-color: var(--bg-primary);
+  &__container {
+    min-height: rem(50);
+    display: flex;
+    align-items: center;
+  }
+  &__text {
+    font-size: rem(14);
+    line-height: 1;
+    letter-spacing: em(0.8, 14);
+
+    @media (max-width: 479.98px) {
+      font-size: rem(12);
+    }
+  }
+  &__link {
+    color: var(--accent-color);
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }

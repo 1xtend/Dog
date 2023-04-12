@@ -75,8 +75,8 @@ body {
 }
 
 .container {
-  max-width: 1320px;
-  padding: 0 20px;
+  max-width: rem(1320);
+  padding: 0 rem(20);
   margin: 0 auto;
 }
 
@@ -115,7 +115,7 @@ main {
   text-align: center;
 
   & > *:not(:last-child) {
-    margin-bottom: 20px;
+    margin-bottom: rem(20);
   }
 
   &__title {
@@ -126,6 +126,9 @@ main {
 
     @media (max-width: 991.98px) {
       font-size: rem(24);
+    }
+    @media (max-width: 479.98px) {
+      font-size: rem(18);
     }
   }
   &__image {
