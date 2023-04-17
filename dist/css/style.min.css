@@ -364,12 +364,17 @@ body.is-locked {
   }
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
 @media (max-width: 599.98px) {
   .navbar {
     position: absolute;
     top: 0;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     display: block;
     background-color: var(--bg-primary);
     padding: 5rem 1.875rem 0 3.125rem;

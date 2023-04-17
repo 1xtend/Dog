@@ -28,11 +28,15 @@
 }
 
 .navbar {
+  display: flex;
+  align-items: center;
+  gap: rem(20);
+
   @media (max-width: 599.98px) {
     position: absolute;
     top: 0;
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     display: block;
     background-color: var(--bg-primary);
     padding: rem(80) rem(30) 0 rem(50);
