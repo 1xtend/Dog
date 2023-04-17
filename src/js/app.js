@@ -1,3 +1,9 @@
+/*===============Body and Html elements===============*/
+export const mainElems = {
+  html: document.documentElement,
+  body: document.body,
+};
+
 /*===============isWebp function===============*/
 import { isWebp } from './isWebp.js';
 isWebp();

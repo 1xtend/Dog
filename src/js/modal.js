@@ -1,3 +1,6 @@
+// Import html and body
+import { mainElems } from './app.js';
+
 /*
 Button example
 
@@ -6,9 +9,6 @@ Button example
 
 export const modal = () => {
   // Vars
-  const html = document.documentElement;
-  const body = document.body;
-
   const modalTogglers = document.querySelectorAll('[data-modal]');
   const lockPadding = document.querySelectorAll('lock-padding');
 
@@ -96,8 +96,8 @@ export const modal = () => {
       });
     }
 
-    body.style.paddingRight = lockPaddingValue;
-    body.classList.add('is-locked');
+    mainElems.body.style.paddingRight = lockPaddingValue;
+    mainElems.body.classList.add('is-locked');
 
     unlock = false;
     setTimeout(() => {
@@ -114,8 +114,8 @@ export const modal = () => {
         });
       }
 
-      body.style.paddingRight = '0px';
-      body.classList.remove('is-locked');
+      mainElems.body.style.paddingRight = '0px';
+      mainElems.body.classList.remove('is-locked');
     }, transitionValue);
 
     unlock = false;
@@ -127,15 +127,15 @@ export const modal = () => {
   // Save element position
   function saveScroll() {
     scrollPosition = window.pageYOffset;
-    html.style.position = 'fixed';
-    html.style.top = -scrollPosition + 'px';
+    mainElems.html.style.position = 'fixed';
+    mainElems.html.style.top = -scrollPosition + 'px';
   }
 
   // Scroll to saved position and reset saved value
   function resetScroll() {
     setTimeout(() => {
-      html.style.top = '';
-      html.style.position = 'relative';
+      mainElems.html.style.top = '';
+      mainElems.html.style.position = 'relative';
       window.scrollTo(0, scrollPosition);
     }, transitionValue);
   }
