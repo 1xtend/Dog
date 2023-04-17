@@ -63,7 +63,6 @@ export function imageLoader() {
     activeMedia.autoplay = true;
     activeMedia.loop = true;
     activeMedia.controls = true;
-    activeMedia.muted = true;
     imageBox.append(activeMedia);
   }
 
