@@ -27,14 +27,12 @@ export const burger = () => {
   // Add Classes
   function addClasses() {
     mainElems.body.classList.toggle('is-locked');
-    mainElems.html.style.display = 'fixed';
     burger.classList.toggle('is-active');
     navbar.classList.toggle('is-active');
   }
 
   // Remove Classes
   function removeClasses() {
-    mainElems.html.style.display = 'relative';
     mainElems.body.classList.remove('is-locked');
     burger.classList.remove('is-active');
     navbar.classList.remove('is-active');
