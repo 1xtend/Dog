@@ -24,14 +24,14 @@ export const burger = () => {
 
   // Add Classes
   function addClasses() {
-    body.classList.toggle('is-fixed');
+    body.classList.toggle('is-locked');
     burger.classList.toggle('is-active');
     navbar.classList.toggle('is-active');
   }
 
   // Remove Classes
   function removeClasses() {
-    body.classList.remove('is-fixed');
+    body.classList.remove('is-locked');
     burger.classList.remove('is-active');
     navbar.classList.remove('is-active');
   }
