@@ -9,6 +9,9 @@ export const modal = () => {
   const body = document.body;
   const lockPadding = document.querySelectorAll('lock-padding');
 
+  const html = document.documentElement;
+
+  let scrollPosition = 0;
   let unlock = true;
 
   const timeout = 300;
@@ -20,7 +23,12 @@ export const modal = () => {
 
         const targetId = modalToggler.dataset.modal;
         const currentModal = document.querySelector(`#${targetId}`);
+
         modalOpen(currentModal);
+
+        scrollPosition = window.pageYOffset;
+        html.style.position = 'fixed';
+        html.style.top = -scrollPosition + 'px';
       });
     });
   }
@@ -58,6 +66,10 @@ export const modal = () => {
   function modalClose(modalActive, doUnlock = true) {
     if (unlock) {
       modalActive.classList.remove('is-active');
+
+      html.style.top = '';
+      html.style.position = 'relative';
+      window.scrollTo(0, scrollPosition);
 
       if (doUnlock) {
         bodyUnLock();
