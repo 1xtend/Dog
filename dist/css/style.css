@@ -99,6 +99,9 @@ h6 {
   --primary-font-family: "Noto Sans", sans-serif;
 }
 
+html {
+  position: relative;
+}
 @media (prefers-color-scheme: dark) {
   html {
     --bg-primary: #171717;
@@ -134,6 +137,12 @@ html.light {
   --accent-color-opacity: rgba(196, 144, 228, 0.2);
   --accent-color-opacity-hover: rgba(196, 144, 228, 0.5);
 }
+html.is-burger {
+  position: fixed;
+}
+html.is-modal {
+  position: fixed;
+}
 
 body {
   font-family: var(--primary-font-family);
@@ -142,7 +151,10 @@ body {
   background-color: var(--bg-primary);
   position: relative;
 }
-body.is-locked {
+body.is-burger {
+  overflow: hidden;
+}
+body.is-modal {
   overflow: hidden;
 }
 

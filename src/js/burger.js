@@ -26,14 +26,16 @@ export const burger = () => {
 
   // Add Classes
   function addClasses() {
-    mainElems.body.classList.toggle('is-locked');
+    mainElems.body.classList.toggle('is-burger');
+    // mainElems.html.classList.toggle('is-burger');
     burger.classList.toggle('is-active');
     navbar.classList.toggle('is-active');
   }
 
   // Remove Classes
   function removeClasses() {
-    mainElems.body.classList.remove('is-locked');
+    mainElems.body.classList.remove('is-burger');
+    // mainElems.html.classList.remove('is-burger');
     burger.classList.remove('is-active');
     navbar.classList.remove('is-active');
   }

@@ -28,7 +28,6 @@ export const modal = () => {
     modalTogglers.forEach((modalToggler) => {
       modalToggler.addEventListener('click', (e) => {
         e.preventDefault();
-
         const targetId = modalToggler.dataset.modal;
         const currentModal = document.querySelector(`#${targetId}`);
 
@@ -44,9 +43,8 @@ export const modal = () => {
   if (modalCloseBtns.length > 0) {
     modalCloseBtns.forEach((closeBtn) => {
       closeBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-
         modalClose(closeBtn.closest('.modal'));
+        e.preventDefault();
       });
     });
   }
@@ -97,7 +95,8 @@ export const modal = () => {
     }
 
     mainElems.body.style.paddingRight = lockPaddingValue;
-    mainElems.body.classList.add('is-locked');
+    mainElems.body.classList.add('is-modal');
+    console.log(mainElems.body.className);
 
     unlock = false;
     setTimeout(() => {
@@ -115,7 +114,8 @@ export const modal = () => {
       }
 
       mainElems.body.style.paddingRight = '0px';
-      mainElems.body.classList.remove('is-locked');
+      mainElems.body.classList.remove('is-modal');
+      console.log(mainElems.body.className);
     }, transitionValue);
 
     unlock = false;
@@ -127,7 +127,7 @@ export const modal = () => {
   // Save element position
   function saveScroll() {
     scrollPosition = window.pageYOffset;
-    mainElems.html.style.position = 'fixed';
+    mainElems.html.classList.add('is-modal');
     mainElems.html.style.top = -scrollPosition + 'px';
   }
 
@@ -135,7 +135,8 @@ export const modal = () => {
   function resetScroll() {
     setTimeout(() => {
       mainElems.html.style.top = '';
-      mainElems.html.style.position = 'relative';
+      mainElems.html.classList.remove('is-modal');
+
       window.scrollTo(0, scrollPosition);
     }, transitionValue);
   }

@@ -11,6 +11,8 @@
 }
 
 html {
+  position: relative;
+
   @media (prefers-color-scheme: dark) {
     & {
       --bg-primary: #171717;
@@ -56,6 +58,13 @@ html {
     --accent-color-opacity: rgba(196, 144, 228, 0.2);
     --accent-color-opacity-hover: rgba(196, 144, 228, 0.5);
   }
+
+  &.is-burger {
+    position: fixed;
+  }
+  &.is-modal {
+    position: fixed;
+  }
 }
 
 body {
@@ -65,7 +74,10 @@ body {
   background-color: var(--bg-primary);
   position: relative;
 
-  &.is-locked {
+  &.is-burger {
+    overflow: hidden;
+  }
+  &.is-modal {
     overflow: hidden;
   }
 }

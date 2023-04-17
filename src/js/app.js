@@ -12,13 +12,13 @@ isWebp();
 import { burger } from './burger.js';
 burger();
 
-/*===============Change Theme===============*/
-import { changeTheme } from './changeTheme.js';
-changeTheme();
-
 /*===============Modal function===============*/
 import { modal } from './modal.js';
 modal();
+
+/*===============Change Theme===============*/
+import { changeTheme } from './changeTheme.js';
+changeTheme();
 
 /*===============Load Image===============*/
 import { imageLoader } from './loadImage.js';
