@@ -59,7 +59,7 @@
     flex-wrap: wrap;
     column-gap: rem(20);
     row-gap: rem(5);
-    justify-content: end;
+    justify-content: flex-end;
 
     @media (max-width: 599.98px) {
       flex-direction: column;

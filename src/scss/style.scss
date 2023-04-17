@@ -61,7 +61,7 @@ body {
   color: var(--color-primary);
   background-color: var(--bg-primary);
 
-  &.is-fixed {
+  &.is-locked {
     overflow: hidden;
   }
 }
