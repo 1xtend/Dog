@@ -90,9 +90,6 @@ body {
 /*===Header===*/
 @import 'header.scss';
 
-/*===Footer===*/
-@import 'footer.scss';
-
 main {
   flex: 1 0 auto;
 }
@@ -105,10 +102,6 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @media (max-width: 599.98px) {
-      padding-top: rem(110);
-    }
   }
 }
 .content-hero {
@@ -173,3 +166,6 @@ main {
     transform: rotate(360deg);
   }
 }
+
+/*===Footer===*/
+@import 'footer.scss';
