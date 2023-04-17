@@ -6,6 +6,8 @@ export const burger = () => {
   const burger = document.querySelector('.burger');
   const navbar = document.querySelector('.navbar');
 
+  let scrollPosition = 0;
+
   // If burger exists
   if (burger) {
     // Open and Close navbar by clicking on a burger
@@ -26,16 +28,17 @@ export const burger = () => {
 
   // Add Classes
   function addClasses() {
-    mainElems.body.classList.toggle('is-burger');
-    // mainElems.html.classList.toggle('is-burger');
     burger.classList.toggle('is-active');
     navbar.classList.toggle('is-active');
+
+    setTimeout(() => {
+      mainElems.body.classList.toggle('burger-lock');
+    }, 300);
   }
 
   // Remove Classes
   function removeClasses() {
-    mainElems.body.classList.remove('is-burger');
-    // mainElems.html.classList.remove('is-burger');
+    mainElems.body.classList.remove('burger-lock');
     burger.classList.remove('is-active');
     navbar.classList.remove('is-active');
   }

@@ -12,6 +12,7 @@
 
 html {
   position: relative;
+  scroll-behavior: smooth;
 
   @media (prefers-color-scheme: dark) {
     & {
@@ -74,11 +75,14 @@ body {
   background-color: var(--bg-primary);
   position: relative;
 
-  &.is-burger {
+  /*===For Modals===*/
+  &.modal-lock {
     overflow: hidden;
+    position: fixed;
   }
-  &.is-modal {
+  &.burger-lock {
     overflow: hidden;
+    position: fixed;
   }
 }
 
