@@ -3,7 +3,7 @@
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: var(--color-primary-opacity-modal);
   top: 0;
   left: 0;
   opacity: 0;
@@ -45,8 +45,8 @@
   }
   &__close {
     position: absolute;
-    top: rem(15);
-    right: rem(15);
+    top: rem(10);
+    right: rem(10);
     background: none;
   }
   &__close-cross {
@@ -57,7 +57,7 @@
   &__title {
     font-weight: 600;
     font-size: rem(32);
-    line-height: lg(44, 32);
+    line-height: lh(44, 32);
     text-align: center;
     margin-bottom: rem(14);
     color: var(--color-primary);
