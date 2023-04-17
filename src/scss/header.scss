@@ -5,6 +5,13 @@
     justify-content: space-between;
     min-height: rem(70);
     gap: rem(20);
+
+    @media (max-width: 599.98px) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
   }
 }
 
@@ -35,15 +42,15 @@
   @media (max-width: 599.98px) {
     position: fixed;
     top: 0;
+    left: -100%;
     width: 100%;
     height: 100%;
     display: block;
     background-color: var(--bg-primary);
     padding: rem(80) rem(30) 0 rem(50);
-    left: -100%;
     transition: left 0.3s ease-in-out;
-    overflow: auto;
     z-index: 2;
+    overflow: auto;
 
     & > *:not(:last-child) {
       margin-bottom: rem(20);
